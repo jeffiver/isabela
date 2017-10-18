@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to Isabela</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div class="header">
+    <img src="images/isabela.jpg" width="1500" height="160">
+  </div>
+
+<ul>
+  <li><img <a style="margin-top:0px;" src="images/isabela.jpg" width="200" height="100"></a></li>
+  <li><a style="margin-left: 100px;" class="active" href="index.html">Home</a></li>
+  <li><a style="margin-left: 50px;" href="isabela.html">Isabela</a></li>
+  <li><a style="margin-left: 50px;" href="aboutus.html">About Us</a></li>
+</ul>
+<div class="juls" style="max-width:500px; height:500px; margin-left:500px; margin-top:50px; margin-bottom:0px;">
+
+  <img class="mySlides fade" src="images/1.jpg" style="width:400px; height:400px;border:5px solid gray;">
+  <img class="mySlides fade" src="images/2.jpg" style="width:400px; height:400px;border:5px solid gray;">
+  <img class="mySlides fade" src="images/3.jpg" style="width:400px; height:400px;border:5px solid gray;">
+  <img class="mySlides fade" src="images/4.jpg" style="width:400px; height:400px;border:5px solid gray;">
+ 
+ </div>
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel,1000);    
+}
+</script>
+
+</body>
+</html>
